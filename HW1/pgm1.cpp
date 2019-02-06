@@ -40,6 +40,10 @@ int main(){
         while (guess != winner){
             std::cin >> guess;
 
+            /*The next three parts of the loop will run and increase the
+            increments of the variable i until the guess is equivalent
+            to the winner variable. The user will then be prompted to
+            continue the program. If they type n the loop will end */
             if (guess > winner){
                 std::cout << "Too High, try again\n";
                 i++;
