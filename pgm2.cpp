@@ -1,6 +1,8 @@
 /*
  Noah McGhghy
  Z698V495
+ Program 2
+ 
  You are going to write two functions. Function fahr_to_cel will return the
  Celsius equivalent of a Fahrenheit temperature.
  Function cel_to_fahr will return the Fahrenheit equivalent
