@@ -135,7 +135,7 @@ int main ()
               cin >> f;
               c = fahr_to_cel(f);
               cout << "The temperature in Celsius is " << c << endl;
-              cout << "\n"
+              cout << "\n";
               break;
           }
           // case 3 creates a equivalent table of Farenheit from Celsius
