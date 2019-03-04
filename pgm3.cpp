@@ -141,6 +141,14 @@ int main ()
    else
    planef = true;
   }
+ for (int z = 0; z << 10; z++)
+	cout << ary[z];
  cout << "Plane is Full. Next flight leaves in 3 hours.\n";
+ 
+ // ary not used warning so output of full ary.
+ for (int z = 0; z < 10 ; z++)
+	cout << ary[z];
+	 
+	
  return 0;
 }
