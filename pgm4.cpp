@@ -60,10 +60,11 @@ while loop that runs until the statement is false
    If statement (changes on which direction your going)
   Case 5
    for statement that changes the values to 1s
+   while statement to move the "turtle"
   Case 6
-   Prints the whole array
+   Prints the whole array using a loop that converts it to astericks and spaces.
   Case 9
-   changes bool to false
+   changes bool to false which will cause the program to end.
   Default
    Improper selection, please try again
 
@@ -90,20 +91,24 @@ int main()
  int ypos = 0;
  // distance is how far they would like to move forward.
  int distance = 0;
+ int dist = 0;
+ int aryone[15]= {2,5,12,3,5,12,3,5,12,3,5,12,6,9};
+ //int arytwo[50] = {2,5,12,3,5,7,4,5,7,3,5,7,6,9};
+ //int arythree[60] = {2,5,15,3,5,15,3,5,15,3,5,15,3,5,5,3,2,5,1,1,5,2,2,5,3,4,1,5,4,4,5,1,2,5,3,1,3,5,1,1,3,5,5,2,5,1,3,5,6,3,5,2,6,9};
  while (whi == true)
  {
-  cout << " Input a 1 to put pen up, 2 to lower pen, 3 to turn right, "
-  <<  "4 to turn left, 5 to move foward, 6 to print, or 9 to end program.\n";
-  cin >> casen;
+  casen = aryone[distance];
   switch (casen)
   {
    //raises the pen, but makes the turtle write zero as it moves.
    case 1:
     penpos = 0;
+    distance++;
     break;
    // lowers the pen so the turtle is writing ones as it moves.
    case 2:
     penpos = 1;
+    distance++;
     break;
    // makes the turtle turn right depending on his current direction.
    case 3:
@@ -111,6 +116,7 @@ int main()
      direc += 1;
     else
      direc = 0;
+    distance++;
     break;
    // makes the turtle turn left depending on his current direction.
    case 4:
@@ -118,54 +124,56 @@ int main()
      direc -= 1;
     else
      direc = 3;
+    distance++;
     break;
     //case 5 has several loops that will change the array in a foward direction
     // nased on the
    case 5:
     if (direc == 0)
     {
-     cout << "How far to move forward?\n";
-     cin >>  distance;
-     while (distance != 0)
+     ++distance;
+     dist = aryone[distance];
+     while (dist != 0)
      {
       floor[xpos][ypos] = {penpos};
       ypos++;
-      distance--;
+      dist--;
      }
     }
     else if (direc == 1)
     {
-     cout << "How far to move forward?\n";
-     cin >>  distance;
-     while (distance != 0)
+     ++distance;
+     dist = aryone[distance];
+     while (dist != 0)
      {
       floor[xpos][ypos] = {penpos};
       xpos++;
-      distance--;
+      dist--;
      }
     }
     else if (direc == 2)
     {
-     cout << "How far to move forward?\n";
-     cin >>  distance;
-     while (distance != 0)
+     ++distance;
+     dist = aryone[distance];
+     while (dist != 0)
      {
       floor[xpos][ypos] = {penpos};
       ypos--;
-      distance--;
+      dist--;
      }
    }
    else
    {
-     cout << "How far to move forward?\n";
-     cin >>  distance;
-     while (distance != 0)
+    ++distance;
+    dist = aryone[distance];
+     while (dist != 0)
      {
       floor[xpos][ypos] = {penpos};
       xpos--;
-      distance--;
+      dist--;
      }
    }
+   distance++;
    break;
    //case 6 will print the array using 2 loops and an if statement.
    case 6:
@@ -180,6 +188,7 @@ int main()
      }
      cout << endl;
     }
+    distance++;
     break;
     case 9:
      whi = false;
